@@ -406,6 +406,12 @@ export const SETTING_VARS = Object.freeze([
   // The off switch for Skill activity's typed-command hook (skill-hook.mjs). A
   // deck started at login without it would put the entry back in.
   "AGENTS_DECK_SKILL_HOOK",
+  // The account's veto (account-flag.mjs), carried because a veto is always
+  // safe to pass on — and the one name here the README's table does not list:
+  // the account it vetoes is hidden, so documenting the veto would announce
+  // it. login-item-opt-outs.test.ts names it as that exception. The switch
+  // that turns the account on, CCDECK_ACCOUNT, is not carried at all.
+  "AGENTS_DECK_NO_ACCOUNT",
 ]);
 
 export function settingsEnv(env = process.env) {
